@@ -1,7 +1,7 @@
 buildscript {
 	ext {
 		kotlinVersion = '1.1.2-4'
-		springBootVersion = '1.5.3.RELEASE'
+		springBootVersion = '1.5.4.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -10,17 +10,14 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-		classpath("io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE")
 	}
 }
 
 apply plugin: 'kotlin'
 apply plugin: 'kotlin-spring'
-apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: "io.spring.dependency-management"
 
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = 1.8
 compileKotlin {
 	kotlinOptions.jvmTarget = "1.8"
@@ -46,6 +43,6 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-consul-dependencies:1.2.1.RELEASE"
+		mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Dalston.SR1'
 	}
 }
