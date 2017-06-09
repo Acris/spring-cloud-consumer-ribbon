@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		kotlinVersion = '1.1.1'
+		kotlinVersion = '1.1.2-5'
 		springBootVersion = '1.5.3.RELEASE'
 	}
 	repositories {
@@ -10,7 +10,7 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-		classpath("io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE")
+		classpath("io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE")
 	}
 }
 
